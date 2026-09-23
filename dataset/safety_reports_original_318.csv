@@ -1,0 +1,319 @@
+report_id,report_text,sif_potential,activity,hazard,barrier_failure,life_saving_rule
+1,Technician disconnected a hydraulic hose while stored pressure remained.,HIGH,Hydraulic Maintenance,High-pressure release,Stored energy not released,Energy Isolation
+2,An electrical cable was repaired while the circuit remained energized.,HIGH,Electrical Maintenance,Electric shock,Isolation not applied,Energy Isolation
+3,Worker performed hot work on a vessel that had not been gas-freed.,HIGH,Hot Work,Explosion,Gas-free verification failed,Hot Work
+4,Excavation was started without a permit or utility scan.,HIGH,Excavation,Underground utility strike,Permit and utility verification failed,Ground Disturbance
+5,Worker stood close to a loaded trailer while it was being maneuvered.,HIGH,Vehicle Movement,Struck-by or crushing,Safe separation failed,Line of Fire
+6,Hot work was started near flammable material without a proper permit.,HIGH,Hot Work,Fire or explosion,Hot-work permit and combustible control failed,Hot Work
+7,Worker entered the swing radius of an excavator while it was operating.,HIGH,Excavation,Struck-by or crushing,Exclusion zone failed,Line of Fire
+8,Vehicle reversed toward a worker without a spotter in a congested area.,HIGH,Vehicle Movement,Vehicle collision,Reversing control failed,Line of Fire
+9,Scaffold access was used despite visible structural damage.,HIGH,Work at Height,Scaffold collapse or fall,Scaffold inspection/control failed,Working at Height
+10,Temporary electrical cable was damaged but remained energized in a wet work area.,HIGH,Electrical Maintenance,Electric shock,Damaged equipment not isolated,Energy Isolation
+11,A worker disconnected fall protection while working beside an open edge.,HIGH,Work at Height,Fall from height,Fall protection control bypassed,Working at Height
+12,Maintenance started before lockout and tagout was applied to the machine.,HIGH,Equipment Maintenance,Unexpected startup,Lockout/tagout missing,Energy Isolation
+13,Pump unexpectedly started while maintenance was being performed without proper isolation.,HIGH,Equipment Maintenance,Unexpected equipment movement,Energy isolation not applied,Energy Isolation
+14,Excavator operated near an unverified underground pipeline.,HIGH,Excavation,Pipeline strike and release,Underground service verification failed,Ground Disturbance
+15,Worker entered a process vessel while isolation of connected energy sources had not been verified.,HIGH,Confined Space Entry,Unexpected energy or hazardous atmosphere,Isolation boundary not verified,Confined Space
+16,Hot work began before the surrounding area was checked for flammable materials.,HIGH,Hot Work,Fire or explosion,Pre-job fire hazard check failed,Hot Work
+17,Worker climbed onto a moving vehicle to adjust equipment.,HIGH,Vehicle Movement,Fall or struck-by injury,Safe access and vehicle isolation failed,Line of Fire
+18,Technician placed a hand inside a pinch point while equipment was being moved.,HIGH,Mechanical Maintenance,Crushing,Safe positioning and isolation failed,Line of Fire
+19,Worker was positioned between a moving vehicle and a fixed structure.,HIGH,Vehicle Movement,Crushing injury,Worker entered line of fire,Line of Fire
+20,A vehicle was driven through a pedestrian-only area while workers were present.,HIGH,Vehicle Movement,Vehicle-pedestrian collision,Traffic segregation failed,Line of Fire
+21,A rotating coupling was exposed while workers were adjusting the machine.,HIGH,Machine Maintenance,Entanglement,Guarding and isolation failed,Energy Isolation
+22,Worker reached into moving machinery to clear a blockage.,HIGH,Machine Operation,Entanglement or crushing,Machine not isolated before intervention,Energy Isolation
+23,Worker used a damaged lifting hook to move a heavy component.,HIGH,Lifting Operation,Dropped load,Lifting equipment inspection failed,Line of Fire
+24,Worker placed hands between moving components during alignment.,HIGH,Mechanical Maintenance,Crushing or pinch point,Hands placed in line of fire,Line of Fire
+25,Worker entered an area with a hydrocarbon leak while using an ignition-producing tool.,HIGH,Gas Leak Response,Fire or explosion,Ignition control failed,Hot Work
+26,A worker was trapped between a moving pipe and a fixed support during alignment.,HIGH,Mechanical Maintenance,Crushing,Line-of-fire control failed,Line of Fire
+27,Worker entered a tank before confirming that the space was safe to enter.,HIGH,Confined Space Entry,Hazardous atmosphere,Entry conditions not verified,Confined Space
+28,Worker walked behind a reversing mobile crane without visual contact with the operator.,HIGH,Vehicle Movement,Vehicle collision,Pedestrian separation failed,Line of Fire
+29,Technician bypassed an electrical interlock to keep equipment running.,HIGH,Electrical Maintenance,Unexpected energization,Safety interlock bypassed,Energy Isolation
+30,Worker entered a restricted area while high-voltage equipment was energized.,HIGH,Electrical Maintenance,Electric shock or arc flash,Access and isolation controls failed,Energy Isolation
+31,Technician opened a live electrical cabinet without confirming the circuit was de-energized.,HIGH,Electrical Maintenance,Electric shock or arc flash,De-energization not verified,Energy Isolation
+32,A worker entered a tank during cleaning while chemical residue remained.,HIGH,Confined Space Entry,Toxic chemical exposure,Hazard assessment and isolation failed,Confined Space
+33,Maintenance crew entered a vessel without an emergency rescue arrangement.,HIGH,Confined Space Entry,Delayed rescue from hazardous atmosphere,Rescue plan absent,Confined Space
+34,Worker accessed a roof edge without a guardrail or fall-arrest system.,HIGH,Work at Height,Fall from height,Edge protection absent,Working at Height
+35,Worker entered a confined space without gas testing or a standby person.,HIGH,Confined Space Entry,Toxic or oxygen-deficient atmosphere,No gas testing and no standby person,Confined Space
+36,Welding was performed near hydrocarbon vapors without gas testing.,HIGH,Hot Work,Fire or explosion,Gas testing absent,Hot Work
+37,Worker attempted to manually guide a swinging load from within its path.,HIGH,Lifting Operation,Struck-by injury,Line-of-fire control failed,Line of Fire
+38,A suspended pipe was being guided by hand while workers stood underneath it.,HIGH,Lifting Operation,Dropped or swinging load,Unsafe positioning under load,Line of Fire
+39,Maintenance crew entered an area with a confirmed toxic gas release without authorization.,HIGH,Gas Leak Response,Toxic gas exposure,Area control and respiratory protection failed,Toxic Gas
+40,Worker opened an energized electrical cabinet without arc-flash controls.,HIGH,Electrical Maintenance,Arc flash,Electrical isolation and boundary controls failed,Energy Isolation
+41,Worker climbed an elevated structure without using required fall protection.,HIGH,Work at Height,Fall from height,Fall protection not used,Working at Height
+42,Worker stood directly below a suspended heavy load during lifting.,HIGH,Lifting Operation,Dropped object,Personnel entered line of fire,Line of Fire
+43,A pressure vessel was opened before confirming zero pressure.,HIGH,Pressure Equipment,Pressure release,Pressure isolation and verification failed,Energy Isolation
+44,Worker was working on an elevated platform with an open edge and no fall protection.,HIGH,Work at Height,Fall from height,Open-edge protection failed,Working at Height
+45,A toxic chemical line was opened without verifying isolation.,HIGH,Chemical Maintenance,Toxic release,Isolation and containment controls failed,Energy Isolation
+46,A suspended load was left unattended above an occupied work area.,HIGH,Lifting Operation,Dropped load,Load control and exclusion failed,Line of Fire
+47,Machine was restarted while a worker's hands were inside the guarded area.,HIGH,Machine Maintenance,Unexpected movement,Energy isolation and restart control failed,Energy Isolation
+48,Worker entered the danger zone while a suspended load was being moved.,HIGH,Lifting Operation,Falling or swinging load,Exclusion zone not maintained,Line of Fire
+49,Worker entered a chemical storage area after ventilation failure without confirming air quality.,HIGH,Chemical Handling,Toxic exposure,Ventilation and atmosphere controls failed,Toxic Gas
+50,A worker entered a sump without verifying that hazardous vapors were absent.,HIGH,Confined Space Entry,Toxic vapor exposure,Atmosphere verification missing,Confined Space
+51,Gas testing showed a hazardous reading but entry continued.,HIGH,Confined Space Entry,Toxic or flammable atmosphere,Unsafe entry decision,Confined Space
+52,Worker entered a chemical process area after a toxic gas alarm without evacuation.,HIGH,Process Area,Toxic gas exposure,Alarm response and evacuation failed,Toxic Gas
+53,Technician entered a vessel without checking oxygen and toxic gas levels.,HIGH,Confined Space Entry,Toxic or oxygen-deficient atmosphere,Atmosphere not tested,Confined Space
+54,Flammable liquid was stored directly beside an active welding operation.,HIGH,Hot Work,Fire,Combustible separation failed,Hot Work
+55,A worker crossed into the drop zone while a crane was moving a heavy load.,HIGH,Lifting Operation,Dropped or swinging load,Exclusion zone breached,Line of Fire
+56,Worker used a scaffold with missing guardrails at an elevated worksite.,HIGH,Work at Height,Fall from height,Scaffold edge protection failed,Working at Height
+57,Worker stood near a suspended load while the crane operator was lifting.,HIGH,Lifting Operation,Dropped load,Exclusion zone failed,Line of Fire
+58,Electrical panel was opened without verifying that the power supply was isolated.,HIGH,Electrical Maintenance,Electric shock or arc flash,Electrical isolation not verified,Energy Isolation
+59,Worker opened a process valve without confirming downstream isolation.,HIGH,Process Operation,Unexpected flow or pressure,Isolation boundary not verified,Energy Isolation
+60,A crane lifted a load with workers inside the potential drop zone.,HIGH,Lifting Operation,Dropped load,Drop-zone control failed,Line of Fire
+61,Worker performed work at height without attaching the safety harness.,HIGH,Work at Height,Fall from height,Fall protection not connected,Working at Height
+62,Worker entered a confined pit without continuous atmospheric monitoring.,HIGH,Confined Space Entry,Hazardous atmosphere,Continuous monitoring absent,Confined Space
+63,Technician removed a motor cover while the motor was still energized.,HIGH,Equipment Maintenance,Unexpected movement or electric shock,Energy isolation failed,Energy Isolation
+64,A lifting sling showed severe damage but was still used for a heavy load.,HIGH,Lifting Operation,Dropped load,Lifting equipment inspection/control failed,Line of Fire
+65,Worker entered a boiler area during an uncontrolled steam release.,HIGH,Boiler Operation,Steam burns or fatal exposure,Area isolation failed,Line of Fire
+66,Technician worked on energized equipment without confirming electrical isolation.,HIGH,Electrical Maintenance,Electric shock or arc flash,Electrical isolation not verified,Energy Isolation
+67,Worker entered a vessel alone without an attendant outside.,HIGH,Confined Space Entry,Hazardous atmosphere and delayed rescue,Attendant absent,Confined Space
+68,Crane load was lifted over workers who were still in the area.,HIGH,Lifting Operation,Dropped load,Lifting exclusion zone failed,Line of Fire
+69,A worker worked from an unguarded elevated platform during strong winds.,HIGH,Work at Height,Fall from height,Weather and edge controls failed,Working at Height
+70,Maintenance was performed on a steam line without verifying isolation and cooling.,HIGH,Steam Line Maintenance,Steam release,Isolation and zero-energy verification failed,Energy Isolation
+71,Worker stood beside an unsupported excavation wall while machinery operated nearby.,HIGH,Excavation,Cave-in or struck-by,Excavation stability and exclusion controls failed,Ground Disturbance
+72,Worker started cutting a line without confirming it was free from flammable contents.,HIGH,Hot Work,Fire or explosion,Line isolation and content verification failed,Hot Work
+73,Worker entered a confined chamber before confirming rescue equipment was available.,HIGH,Confined Space Entry,Delayed rescue,Rescue readiness failed,Confined Space
+74,Worker accessed an elevated area through an improvised platform.,HIGH,Work at Height,Fall from height,Safe access control failed,Working at Height
+75,Worker used a metal tool close to exposed energized conductors.,HIGH,Electrical Maintenance,Electric shock or arc flash,Safe approach controls failed,Energy Isolation
+76,Worker climbed onto a tank without an approved access system or fall protection.,HIGH,Work at Height,Fall from height,Safe access and fall protection failed,Working at Height
+77,Excavation work continued without checking for underground utilities.,HIGH,Excavation,Utility strike,Utility identification barrier failed,Ground Disturbance
+78,Heavy vehicle operated close to an excavation edge without adequate setback.,HIGH,Excavation,Collapse or vehicle fall,Excavation edge control failed,Ground Disturbance
+79,Worker removed a machine guard while the equipment was still running.,HIGH,Machine Operation,Contact with moving machinery,Guard and energy control bypassed,Energy Isolation
+80,Technician opened a pressurized line without isolating and depressurizing it.,HIGH,Line Maintenance,Pressure release,Isolation and depressurization missing,Energy Isolation
+81,Gas detector alarm was ignored while workers were inside a process vessel.,HIGH,Confined Space Entry,Toxic or flammable atmosphere,Gas alarm response failed,Confined Space
+82,Confined-space entry permit was not verified before entry.,HIGH,Confined Space Entry,Hazardous atmosphere,Permit control failed,Confined Space
+83,Technician worked beneath an elevated machine component supported only by a hydraulic cylinder.,HIGH,Mechanical Maintenance,Unexpected lowering,Mechanical blocking and isolation failed,Line of Fire
+84,Worker crossed an active vehicle route while a truck was approaching.,HIGH,Vehicle Movement,Vehicle-pedestrian collision,Traffic segregation failed,Line of Fire
+85,Worker approached exposed energized conductors during troubleshooting.,HIGH,Electrical Maintenance,Electric shock or arc flash,Approach boundary and isolation controls failed,Energy Isolation
+86,Worker used an unapproved ladder to reach a high work location.,HIGH,Work at Height,Fall from height,Safe access control failed,Working at Height
+87,A rotating shaft was exposed while workers were performing nearby maintenance.,HIGH,Machine Maintenance,Entanglement,Guarding and isolation failed,Energy Isolation
+88,Scaffold was used without proper inspection or tagging.,HIGH,Work at Height,Fall from scaffold,Scaffold inspection barrier failed,Working at Height
+89,Flammable gas was released during maintenance and workers remained nearby.,HIGH,Gas Leak Response,Fire or explosion,Gas isolation and exclusion controls failed,Toxic Gas
+90,Welding was carried out without a fire watch in an area containing combustible materials.,HIGH,Hot Work,Fire,Fire-watch barrier absent,Hot Work
+91,A worker crossed a barrier into an active lifting zone to retrieve a tool.,HIGH,Lifting Operation,Dropped load,Barricade and exclusion control bypassed,Line of Fire
+92,A gas leak was detected but ignition sources were not removed.,HIGH,Gas Leak Response,Fire or explosion,Ignition-source control failed,Hot Work
+93,Worker was inside a confined space while the ventilation system was not operating.,HIGH,Confined Space Entry,Oxygen deficiency or toxic exposure,Ventilation barrier failed,Confined Space
+94,A reversing truck moved toward workers without an audible warning or spotter.,HIGH,Vehicle Movement,Vehicle collision,Reversing controls failed,Line of Fire
+95,Worker was exposed to a chemical splash while opening a pressurized connection without depressurizing it.,HIGH,Chemical Maintenance,Chemical release,Depressurization and containment failed,Energy Isolation
+96,A pressure relief device was isolated while the system remained pressurized.,HIGH,Process Operation,Overpressure release,Critical safety device isolation,Energy Isolation
+97,Worker approached an uncontrolled gas leak to investigate without respiratory protection.,HIGH,Gas Leak Response,Toxic or flammable gas,Area isolation and emergency response failed,Toxic Gas
+98,Worker entered an unsupported excavation deeper than the safe limit.,HIGH,Excavation,Cave-in,Excavation support and access controls failed,Ground Disturbance
+99,Worker attempted to clear a conveyor jam without isolating the conveyor.,HIGH,Conveyor Maintenance,Entanglement,Lockout/tagout missing,Energy Isolation
+100,Grinding sparks were produced near an open flammable chemical container.,HIGH,Hot Work,Fire or explosion,Combustible source not controlled,Hot Work
+101,A floor drain was slow to clear after cleaning.,MEDIUM,Housekeeping,Standing water,Drain maintenance needed,
+102,A work area had a minor lighting issue during daytime.,MEDIUM,Worksite Control,Reduced visibility,Lighting maintenance needed,
+103,A small amount of water collected near a wash station.,MEDIUM,Housekeeping,Slip hazard,Drainage/cleaning needed,
+104,A chemical label was partially damaged but the container remained identifiable.,MEDIUM,Chemical Handling,Identification error,Label maintenance needed,
+105,A ladder inspection label was difficult to read.,MEDIUM,Work at Height,Inspection identification issue,Label maintenance needed,Working at Height
+106,A small crack was noticed in a non-critical concrete walkway.,MEDIUM,Civil Maintenance,Trip hazard,Maintenance needed,
+107,A worker reported mild discomfort after repetitive manual handling.,MEDIUM,Manual Handling,Ergonomic strain,Task rotation needed,
+108,A small section of barrier tape was torn.,MEDIUM,Worksite Control,Reduced area demarcation,Barrier maintenance needed,
+109,A floor mat was slightly curled at one edge.,MEDIUM,Housekeeping,Trip hazard,Mat replacement/adjustment needed,
+110,Worker used an unsafe lifting posture for a moderately heavy object.,MEDIUM,Manual Handling,Musculoskeletal strain,Manual handling technique inadequate,
+111,A temporary sign was difficult to read because it was dirty.,MEDIUM,Worksite Control,Reduced warning visibility,Sign maintenance needed,
+112,Minor corrosion was observed on a handrail.,MEDIUM,Inspection,Loss of handrail integrity,Inspection/maintenance needed,
+113,"A vehicle mirror was slightly dirty, reducing visibility.",MEDIUM,Vehicle Movement,Reduced visibility,Vehicle cleaning needed,Line of Fire
+114,A low-risk work area had a slightly obstructed cabinet.,MEDIUM,Housekeeping,Minor access restriction,Storage control needed,
+115,A fire hose cabinet had a small obstruction nearby.,MEDIUM,Fire Safety,Delayed access,Cabinet access control needed,
+116,A small amount of debris was found below a workbench.,MEDIUM,Housekeeping,Trip hazard,Cleaning needed,
+117,A small amount of packaging was left near a machine.,MEDIUM,Housekeeping,Minor trip/fire hazard,Waste removal needed,
+118,A small amount of non-hazardous material was spilled and cleaned.,MEDIUM,Material Handling,Minor slip hazard,Spill response needed,
+119,A storage area had minor clutter around one shelf.,MEDIUM,Housekeeping,Trip hazard,Organization needed,
+120,A hand tool was left on an elevated platform and could potentially fall.,MEDIUM,Work at Height,Falling object,Tool control inadequate,Working at Height
+121,A low-level equipment alarm was briefly activated during routine operation.,MEDIUM,Equipment Operation,Equipment condition,Inspection follow-up needed,
+122,A small hand tool was found on a non-elevated work surface.,MEDIUM,Housekeeping,Minor object hazard,Tool storage needed,
+123,Worker noticed a loose floor tile in an office area.,MEDIUM,Housekeeping,Trip hazard,Floor maintenance needed,
+124,A worker reported that a walkway was becoming slippery after rain.,MEDIUM,Housekeeping,Slip hazard,Weather-related housekeeping needed,
+125,A cabinet door was left open in a maintenance room.,MEDIUM,Housekeeping,Minor obstruction,Storage discipline issue,
+126,A temporary cable cover was not positioned neatly but remained functional.,MEDIUM,Electrical,Trip hazard,Cable management needed,
+127,A small area of floor paint was peeling in a low-traffic location.,MEDIUM,Housekeeping,Minor trip hazard,Floor maintenance needed,
+128,A worker noticed a minor air leak from a pneumatic fitting.,MEDIUM,Pneumatic Maintenance,Minor pressure release,Fitting maintenance needed,
+129,A minor vibration was noticed in a non-critical pump during routine inspection.,MEDIUM,Equipment Inspection,Equipment degradation,Inspection follow-up needed,
+130,A worker reported that a warning sticker was peeling.,MEDIUM,Safety Communication,Reduced warning visibility,Sticker replacement needed,
+131,Emergency exit was partially blocked by stored equipment.,MEDIUM,Housekeeping,Restricted emergency access,Storage control failed,
+132,A minor paint spill occurred in a designated maintenance area.,MEDIUM,Housekeeping,Slip hazard,Spill cleanup needed,
+133,A small scratch was noticed on a non-critical machine guard.,MEDIUM,Machine Inspection,Reduced guard integrity,Inspection follow-up needed,Energy Isolation
+134,Worker carried a load that was heavier than recommended without assistance.,MEDIUM,Manual Handling,Strain injury,Manual handling control inadequate,
+135,A small gap was noticed under a non-critical door.,MEDIUM,Maintenance,Minor condition issue,Maintenance follow-up needed,
+136,A worker noticed a minor defect in a storage shelf label.,MEDIUM,Storage,Identification issue,Label maintenance needed,
+137,Worker was not wearing hearing protection in a moderately noisy area.,MEDIUM,Noise Exposure,Hearing exposure,PPE compliance issue,
+138,A small crack was observed in a non-load-bearing wall.,MEDIUM,Civil Maintenance,Minor structural concern,Inspection follow-up needed,
+139,A worker found a slightly loose wheel on a material trolley and removed it from use.,MEDIUM,Material Handling,Trolley control issue,Equipment inspection needed,
+140,A worker found a loose screw on a non-critical cabinet.,MEDIUM,Maintenance,Minor equipment condition,Maintenance follow-up needed,
+141,A minor leak was found from a garden water connection.,MEDIUM,Maintenance,Slip hazard,Minor repair needed,
+142,A worker reported that a manual handling task was repetitive.,MEDIUM,Manual Handling,Ergonomic strain,Task review needed,
+143,A worker noticed that a toolbox latch was loose.,MEDIUM,Hand Tools,Tool storage issue,Tool maintenance needed,
+144,Minor dust accumulation was observed around the production area.,MEDIUM,Housekeeping,Dust exposure,Cleaning frequency inadequate,
+145,A small piece of packaging material was found in a pedestrian path.,MEDIUM,Housekeeping,Trip hazard,Waste removal needed,
+146,A storage rack had one empty shelf with materials placed unevenly.,MEDIUM,Storage,Falling-object potential,Storage arrangement needed,
+147,A hose reel was difficult to access because of nearby materials.,MEDIUM,Fire Safety,Delayed emergency access,Storage control needed,
+148,A workbench drawer was left open after use.,MEDIUM,Housekeeping,Minor obstruction,Housekeeping discipline needed,
+149,A small amount of sand accumulated on a walkway.,MEDIUM,Housekeeping,Slip hazard,Cleaning needed,
+150,A compressed-air hose was coiled poorly near a workbench.,MEDIUM,Housekeeping,Trip hazard,Hose storage needed,
+151,A work table had several unused cables piled underneath.,MEDIUM,Housekeeping,Trip hazard,Cable organization needed,
+152,A vehicle parking area had faded lane markings.,MEDIUM,Vehicle Movement,Traffic confusion,Road marking maintenance needed,Line of Fire
+153,Chemical container was left open but no exposure occurred.,MEDIUM,Chemical Handling,Chemical vapor exposure,Container closure control failed,
+154,A worker's gloves were worn but still intact and nearing replacement.,MEDIUM,PPE,Reduced hand protection,PPE replacement needed,
+155,A worker used a hand tool with a worn grip but stopped when it was noticed.,MEDIUM,Hand Tools,Loss of tool control,Tool inspection needed,
+156,A toolbox was left open beside a work area.,MEDIUM,Housekeeping,Minor trip/object hazard,Tool storage inadequate,
+157,A ladder was stored in a way that narrowed the walkway.,MEDIUM,Storage,Restricted access,Storage arrangement inadequate,
+158,A minor housekeeping issue was observed near the storage room.,MEDIUM,Housekeeping,Trip hazard,Cleaning needed,
+159,A warning light on a non-critical piece of equipment was dim.,MEDIUM,Equipment Inspection,Reduced warning visibility,Indicator maintenance needed,
+160,A walkway had a small uneven section that was clearly marked.,MEDIUM,Civil Maintenance,Trip hazard,Surface repair needed,
+161,A hose connection showed minor seepage with no personnel exposure.,MEDIUM,Process Area,Minor fluid exposure,Connection maintenance needed,
+162,A storage shelf was slightly overloaded but remained stable.,MEDIUM,Storage,Falling object potential,Storage load control needed,
+163,A handrail was dusty and required cleaning.,MEDIUM,Housekeeping,Reduced grip,Cleaning needed,
+164,Wet floor was found near a doorway but no one was injured.,MEDIUM,Housekeeping,Slip hazard,Floor condition control needed,
+165,A worker left a reusable water container near a workbench.,MEDIUM,Housekeeping,Minor obstruction,Workstation housekeeping needed,
+166,A fire extinguisher inspection tag was becoming difficult to read.,MEDIUM,Fire Safety,Inspection identification issue,Tag replacement needed,
+167,A storage cabinet was left unlocked in a low-risk area.,MEDIUM,Storage,Minor access-control issue,Storage discipline needed,
+168,Small oil spill was noticed near a walkway and cleaned immediately.,MEDIUM,Housekeeping,Slip hazard,Housekeeping response delayed,
+169,A worker forgot to return a small hand tool to storage.,MEDIUM,Housekeeping,Minor trip/object hazard,Tool storage discipline,
+170,A small leak was observed from a non-hazardous water pipe.,MEDIUM,Maintenance,Slip hazard,Minor leak repair needed,
+171,A portable fan was placed too close to a walkway.,MEDIUM,Worksite Control,Trip/obstruction hazard,Equipment placement needed,
+172,Small debris was found around a work platform.,MEDIUM,Housekeeping,Trip hazard,Cleaning needed,
+173,A worker noticed a loose bolt on a handrail and reported it.,MEDIUM,Inspection,Handrail integrity,Maintenance follow-up needed,
+174,A worker used a ladder with a slightly damaged step but stopped work after noticing it.,MEDIUM,Work at Height,Fall hazard,Equipment inspection/control needed,Working at Height
+175,A worker noticed that a safety sign was facing the wrong direction.,MEDIUM,Safety Communication,Reduced warning visibility,Sign positioning needed,
+176,A workbench was slightly cluttered with unused materials.,MEDIUM,Housekeeping,Minor trip/cut hazard,Workstation organization needed,
+177,A drain grate was partially covered by debris.,MEDIUM,Housekeeping,Drainage and trip hazard,Cleaning needed,
+178,"A work light was positioned poorly, reducing visibility.",MEDIUM,Worksite Control,Reduced visibility,Lighting arrangement inadequate,
+179,A worker noticed a small defect in a non-critical hand tool and reported it.,MEDIUM,Hand Tools,Tool failure potential,Tool inspection needed,
+180,A minor surface crack was found on a workshop floor.,MEDIUM,Civil Maintenance,Trip hazard,Floor maintenance needed,
+181,A small amount of water was found under a sink.,MEDIUM,Housekeeping,Slip hazard,Minor leak cleanup needed,
+182,A pallet was stored outside the marked storage boundary.,MEDIUM,Storage,Obstruction,Storage discipline issue,
+183,A temporary sign was partially hidden by stored materials.,MEDIUM,Worksite Control,Reduced warning visibility,Storage placement issue,
+184,A small amount of cardboard was stored near a heat source but no ignition occurred.,MEDIUM,Fire Safety,Fire potential,Storage separation needed,Hot Work
+185,A small amount of non-hazardous material spilled during transfer and was cleaned.,MEDIUM,Material Handling,Minor slip hazard,Spill response needed,
+186,A forklift had a minor warning sticker missing.,MEDIUM,Vehicle Movement,Reduced warning communication,Vehicle signage maintenance,Line of Fire
+187,A tool bag was placed near the edge of an elevated platform.,MEDIUM,Work at Height,Falling object,Tool placement control needed,Working at Height
+188,A warning cone was missing from a small temporary wet area.,MEDIUM,Housekeeping,Slip hazard,Temporary warning control needed,
+189,A small storage box partially covered a floor marking.,MEDIUM,Storage,Reduced visual guidance,Storage placement needed,
+190,Loose cable was found across part of a maintenance walkway.,MEDIUM,Housekeeping,Trip hazard,Cable management inadequate,
+191,A ventilation grille was dusty and needed cleaning.,MEDIUM,Ventilation,Reduced airflow,Maintenance/cleaning needed,
+192,A worker briefly entered a marked equipment area to retrieve a tool.,MEDIUM,Worksite Control,Restricted-area access,Access discipline issue,
+193,A worker found a slightly loose cabinet handle.,MEDIUM,Maintenance,Minor equipment condition,Maintenance needed,
+194,A forklift horn was quieter than expected but remained operational.,MEDIUM,Vehicle Movement,Reduced warning,Vehicle inspection needed,Line of Fire
+195,A small amount of non-hazardous dust was visible around a transfer point.,MEDIUM,Housekeeping,Dust exposure,Cleaning frequency needed,
+196,A cleaning chemical label was slightly faded.,MEDIUM,Chemical Handling,Identification issue,Label maintenance needed,
+197,A storage bin lid was left open in a work area.,MEDIUM,Housekeeping,Minor obstruction,Storage discipline needed,
+198,A small hand tool was found without its storage case.,MEDIUM,Hand Tools,Minor tool hazard,Tool storage control needed,
+199,A drain cover was slightly loose but remained in place.,MEDIUM,Housekeeping,Trip hazard,Drain maintenance needed,
+200,A portable light stand was slightly unstable but not in use.,MEDIUM,Worksite Control,Tip-over potential,Equipment storage needed,
+201,Worker followed the approved procedure during routine equipment inspection.,LOW,Routine Inspection,Operational hazard,Procedure compliance effective,
+202,Supervisor completed a field verification of critical controls.,LOW,Safety Verification,Critical control failure,Field verification effective,
+203,The team verified that the isolation register matched field isolation points.,LOW,Isolation Management,Unexpected energy release,Isolation reconciliation effective,Energy Isolation
+204,A lifting supervisor was present throughout the critical lift.,LOW,Lifting Operation,Dropped load,Lift supervision effective,Line of Fire
+205,Excavation was postponed until underground service drawings were confirmed.,LOW,Excavation,Utility strike,Utility verification and stop-work effective,Ground Disturbance
+206,A dedicated fire watch monitored the area after hot work was completed.,LOW,Hot Work,Fire,Post-work fire watch effective,Hot Work
+207,A rescue drill was completed before planned confined-space work.,LOW,Confined Space Entry,Delayed rescue,Emergency preparedness effective,Confined Space
+208,Workers confirmed that all temporary equipment had been removed before startup.,LOW,Equipment Startup,Unexpected movement,Startup checklist effective,Energy Isolation
+209,The supervisor confirmed that critical controls were in place before work.,LOW,Safety Verification,High-consequence hazard,Critical-control verification effective,
+210,Excavation access was provided through an approved ladder.,LOW,Excavation,Fall into excavation,Safe access effective,Ground Disturbance
+211,A pedestrian stopped at the marked crossing before approaching the vehicle route.,LOW,Vehicle Movement,Vehicle-pedestrian collision,Pedestrian control effective,Line of Fire
+212,Worker used mechanical lifting assistance instead of manually lifting a heavy component.,LOW,Material Handling,Manual handling strain,Handling control effective,
+213,The site reviewed repeated safety observations during the monthly meeting.,LOW,Safety Management,Recurring hazard,Trend monitoring effective,
+214,A supervisor verified the exclusion zone before lifting started.,LOW,Lifting Operation,Dropped load,Exclusion-zone verification effective,Line of Fire
+215,Worker confirmed the rescue route before starting elevated work.,LOW,Work at Height,Delayed rescue,Rescue planning effective,Working at Height
+216,Electrical isolation was independently verified before work started.,LOW,Electrical Maintenance,Electric shock,Independent isolation verification effective,Energy Isolation
+217,The maintenance team verified zero pressure before disconnecting the process connection.,LOW,Process Maintenance,Pressure release,Zero-pressure verification effective,Energy Isolation
+218,Worker immediately reported an unsafe condition instead of continuing the task.,LOW,Near-Miss Reporting,Potential hazard,Stop-work and reporting effective,
+219,Electrical worker followed the approved isolation sequence before maintenance.,LOW,Electrical Maintenance,Electric shock,Isolation procedure effective,Energy Isolation
+220,Worker used a lockout device and personal tag on the isolation point.,LOW,Equipment Maintenance,Unexpected startup,Lockout/tagout effective,Energy Isolation
+221,Worker used a digital permit checklist before starting the task.,LOW,Permit to Work,Task hazards,Digital permit control effective,
+222,The emergency exit route was checked and kept clear before maintenance.,LOW,Emergency Preparedness,Delayed evacuation,Emergency route control effective,
+223,A trained maintenance crew followed the approved lockout procedure.,LOW,Equipment Maintenance,Unexpected startup,Competency and energy isolation effective,Energy Isolation
+224,Maintenance crew verified all isolation locks before starting work.,LOW,Equipment Maintenance,Unexpected startup,Lock verification effective,Energy Isolation
+225,Hot work was postponed until gas testing confirmed safe conditions.,LOW,Hot Work,Fire/explosion,Gas testing and stop-work effective,Hot Work
+226,Worker stopped elevated work when the required fall protection was unavailable.,LOW,Work at Height,Fall from height,Stop-work control effective,Working at Height
+227,A permit-to-work check confirmed required isolations before maintenance.,LOW,Permit to Work,Unexpected release,Permit and isolation verification effective,Energy Isolation
+228,A toolbox talk covered line-of-fire hazards before maintenance.,LOW,Maintenance,Struck-by/crushing,Hazard communication effective,Line of Fire
+229,Technician used mechanical blocking before entering the equipment danger zone.,LOW,Mechanical Maintenance,Unexpected movement,Mechanical isolation effective,Energy Isolation
+230,Worker remained outside the lifting exclusion zone during crane operations.,LOW,Lifting Operation,Dropped load,Exclusion zone respected,Line of Fire
+231,A toolbox talk covered hot-work controls before welding.,LOW,Hot Work,Fire/explosion,Pre-task communication effective,Hot Work
+232,Vehicle and pedestrian routes were separated using barriers.,LOW,Vehicle Movement,Vehicle-pedestrian collision,Traffic segregation effective,Line of Fire
+233,A qualified electrician performed the electrical isolation.,LOW,Electrical Maintenance,Electric shock,Competency control effective,Energy Isolation
+234,Worker reported a near miss and the area was made safe immediately.,LOW,Near-Miss Reporting,Potential uncontrolled hazard,Prompt reporting and corrective action effective,
+235,Worker stayed clear of pinch points during equipment alignment.,LOW,Mechanical Maintenance,Crushing,Safe positioning effective,Line of Fire
+236,Maintenance team installed mechanical blocks before working under raised equipment.,LOW,Mechanical Maintenance,Unexpected lowering,Mechanical isolation effective,Energy Isolation
+237,Conveyor jam was cleared only after lockout and verification.,LOW,Conveyor Maintenance,Entanglement,Lockout/tagout effective,Energy Isolation
+238,Gas monitoring was active throughout a permitted hot-work task.,LOW,Hot Work,Fire/explosion,Continuous gas monitoring effective,Hot Work
+239,Worker waited for the crane load to be fully lowered before entering the area.,LOW,Lifting Operation,Dropped load,Safe positioning effective,Line of Fire
+240,A supervisor verified that barriers were intact before work began.,LOW,Worksite Control,Unauthorized access,Barrier inspection effective,
+241,Worker verified that the confined space had adequate ventilation before entry.,LOW,Confined Space Entry,Toxic atmosphere,Ventilation control effective,Confined Space
+242,The worker verified the isolation by attempting a controlled start before maintenance.,LOW,Equipment Maintenance,Unexpected startup,Try-start verification effective,Energy Isolation
+243,Worker returned all tools to storage after maintenance.,LOW,Housekeeping,Trip/object hazard,Tool control effective,
+244,The excavation was monitored while heavy equipment operated nearby.,LOW,Excavation,Cave-in/struck-by,Exclusion and monitoring controls effective,Ground Disturbance
+245,The team confirmed weather conditions were acceptable before elevated work.,LOW,Work at Height,Fall from height,Weather assessment effective,Working at Height
+246,Worker used an inspected full-body harness with an approved anchor point.,LOW,Work at Height,Fall from height,Fall protection effective,Working at Height
+247,Worker inspected the scaffold before climbing and confirmed the tag was valid.,LOW,Work at Height,Fall from scaffold,Scaffold inspection effective,Working at Height
+248,A lifting aid was used for a heavy component to reduce manual handling.,LOW,Material Handling,Strain injury,Mechanical assistance effective,
+249,The worksite stopped excavation when an unidentified service was discovered.,LOW,Excavation,Utility strike,Stop-work control effective,Ground Disturbance
+250,The supervisor confirmed no one was under the suspended load before lifting.,LOW,Lifting Operation,Dropped load,Drop-zone verification effective,Line of Fire
+251,Fire blankets were installed to protect nearby combustible materials during welding.,LOW,Hot Work,Fire,Spark containment effective,Hot Work
+252,Machine guards were checked before equipment startup.,LOW,Machine Operation,Entanglement,Guarding verification effective,Energy Isolation
+253,A toolbox talk covered energy isolation before equipment maintenance.,LOW,Equipment Maintenance,Unexpected startup,Pre-task communication effective,Energy Isolation
+254,The team reassessed hazards after the work scope changed.,LOW,Safety Planning,Changing hazards,Dynamic risk assessment effective,
+255,Supervisor confirmed that required PPE was available before work started.,LOW,General Maintenance,Exposure hazard,PPE readiness effective,
+256,The confined-space attendant maintained communication throughout the task.,LOW,Confined Space Entry,Delayed rescue,Attendant control effective,Confined Space
+257,Worker inspected the welding leads before starting the task.,LOW,Hot Work,Electrical/fire hazard,Equipment inspection effective,Hot Work
+258,The team completed a job safety analysis before starting maintenance.,LOW,Safety Planning,Multiple hazards,Hazard assessment effective,
+259,The team barricaded the area before moving a suspended load.,LOW,Lifting Operation,Dropped load,Barricade and exclusion controls effective,Line of Fire
+260,Worker completed confined-space entry after gas testing showed safe conditions.,LOW,Confined Space Entry,Atmospheric exposure,Gas testing and permit controls effective,Confined Space
+261,Worker verified PPE requirements before entering the work area.,LOW,Routine Operation,Exposure hazard,PPE compliance effective,
+262,Hot-work equipment was kept away from gas cylinders and combustibles.,LOW,Hot Work,Fire/explosion,Separation control effective,Hot Work
+263,The machine was tested at low speed with personnel outside the danger zone.,LOW,Machine Testing,Unexpected movement,Controlled testing effective,Line of Fire
+264,Worker stayed outside the swing radius of the excavator.,LOW,Excavation,Struck-by injury,Exclusion zone effective,Line of Fire
+265,Machine guard was reinstalled before the equipment was returned to service.,LOW,Machine Maintenance,Entanglement,Guarding control effective,Energy Isolation
+266,Workers reviewed the communication plan before a complex maintenance task.,LOW,Maintenance,Miscommunication,Communication planning effective,
+267,A barricaded area prevented pedestrians from entering the lifting zone.,LOW,Lifting Operation,Dropped load,Barricade effective,Line of Fire
+268,The crane operator refused to lift until the drop zone was cleared.,LOW,Lifting Operation,Dropped load,Stop-work authority effective,Line of Fire
+269,The work area remained barricaded until maintenance was fully completed.,LOW,Maintenance,Unauthorized access,Barricade control effective,
+270,Worker used a designated safe route around a chemical transfer operation.,LOW,Chemical Handling,Chemical exposure,Area segregation effective,
+271,Shift handover included details of all active equipment isolations.,LOW,Shift Handover,Unexpected startup,Isolation handover effective,Energy Isolation
+272,The team used a controlled handover between shifts for ongoing maintenance.,LOW,Maintenance,Loss of safety information,Shift handover effective,
+273,Workers maintained the required exclusion distance from operating machinery.,LOW,Machine Operation,Struck-by/crushing,Exclusion distance effective,Line of Fire
+274,Worker stopped work when the required isolation could not be verified.,LOW,Equipment Maintenance,Unexpected energy release,Stop-work authority effective,Energy Isolation
+275,Worker confirmed the emergency stop location before operating machinery.,LOW,Machine Operation,Unexpected movement,Emergency-stop readiness effective,Energy Isolation
+276,A confined-space permit was suspended when ventilation failed.,LOW,Confined Space Entry,Hazardous atmosphere,Permit suspension and stop-work effective,Confined Space
+277,Maintenance team completed a toolbox talk before a high-risk lifting task.,LOW,Lifting Operation,Dropped load,Pre-task planning effective,Line of Fire
+278,The worker remained within the protected area while performing elevated work.,LOW,Work at Height,Fall from height,Fall protection effective,Working at Height
+279,A trained worker used approved fall-protection equipment at height.,LOW,Work at Height,Fall from height,Competency and fall protection effective,Working at Height
+280,The worksite maintained a clear emergency route throughout the maintenance task.,LOW,Maintenance,Delayed emergency response,Emergency access control effective,
+281,Worker used a controlled pedestrian route around operating equipment.,LOW,Vehicle Movement,Vehicle-pedestrian collision,Traffic control effective,Line of Fire
+282,Worker confirmed all combustible materials were removed before grinding.,LOW,Hot Work,Fire,Combustible control effective,Hot Work
+283,Elevated work was postponed until an approved anchor point was available.,LOW,Work at Height,Fall from height,Fall protection planning effective,Working at Height
+284,Worker confirmed underground services were marked before excavation.,LOW,Excavation,Utility strike,Utility identification effective,Ground Disturbance
+285,The site reviewed high-risk activities during the weekly safety meeting.,LOW,Safety Management,Recurring hazards,Risk review effective,
+286,The team confirmed the confined-space monitoring equipment remained operational.,LOW,Confined Space Entry,Hazardous atmosphere,Monitoring equipment control effective,Confined Space
+287,Corrective actions from a previous safety observation were verified as closed.,LOW,Safety Management,Recurring hazard,Corrective-action verification effective,
+288,The team reviewed previous near misses before starting a similar task.,LOW,Safety Planning,Recurring hazards,Learning from incidents effective,
+289,The work permit was displayed at the worksite and matched the task.,LOW,Permit to Work,Task control,Permit control effective,
+290,Gas detector was calibrated and tested before a confined-space entry.,LOW,Confined Space Entry,Hazardous atmosphere,Gas detector control effective,Confined Space
+291,The elevated work area had compliant guardrails and toe boards.,LOW,Work at Height,Fall/falling object,Edge protection effective,Working at Height
+292,Worker did not enter the excavation until stability was confirmed.,LOW,Excavation,Cave-in,Entry verification effective,Ground Disturbance
+293,The team verified that corrective actions addressed the underlying hazard.,LOW,Safety Management,Recurring hazard,Corrective-action effectiveness review,
+294,Worker completed a chemical compatibility check before transfer.,LOW,Chemical Handling,Chemical reaction/exposure,Chemical compatibility control effective,
+295,The driver waited until the pedestrian route was clear before moving.,LOW,Vehicle Movement,Vehicle-pedestrian collision,Traffic control effective,Line of Fire
+296,Crane operator stopped lifting when a worker approached the exclusion zone.,LOW,Lifting Operation,Dropped load,Stop-work control effective,Line of Fire
+297,The team completed a pre-start inspection before operating the equipment.,LOW,Equipment Operation,Equipment failure,Pre-start inspection effective,
+298,Workers followed the site emergency evacuation procedure during a drill.,LOW,Emergency Response,Emergency exposure,Emergency response controls effective,
+299,Excavation permit and utility drawings were reviewed before digging.,LOW,Excavation,Utility strike,Permit and utility controls effective,Ground Disturbance
+300,Technician verified downstream isolation before opening a process valve.,LOW,Process Maintenance,Unexpected flow,Isolation verification effective,Energy Isolation
+301,Worker was observed carrying a heavy load using an improper lifting technique without any assistance.,MEDIUM,Manual Handling,Musculoskeletal Injury,Manual handling procedure not followed,No clear Life-Saving Rule detected
+302,"A worker used an improper technique to lift a heavy load, risking a back strain.",MEDIUM,Manual Handling,Musculoskeletal Injury,Safe lifting technique not applied,No clear Life-Saving Rule detected
+303,Team member was observed lifting a heavy load alone instead of using a mechanical aid or getting assistance.,MEDIUM,Manual Handling,Musculoskeletal Injury,Mechanical aid not used for heavy load,No clear Life-Saving Rule detected
+304,"Worker carried a heavy load with incorrect posture, increasing the risk of a musculoskeletal injury.",MEDIUM,Manual Handling,Musculoskeletal Injury,Incorrect posture during manual handling,No clear Life-Saving Rule detected
+305,A technician was handling a heavy component using improper manual technique without a lifting aid.,MEDIUM,Manual Handling,Musculoskeletal Injury,Lifting aid not requested for heavy component,No clear Life-Saving Rule detected
+306,Supervisor observed a worker attempting to carry a load that was too heavy for a single person without using the team-lift procedure.,MEDIUM,Manual Handling,Musculoskeletal Injury,Team-lift procedure not followed for heavy load,No clear Life-Saving Rule detected
+307,A worker stood beneath a suspended heavy load while it was being lifted by a crane.,HIGH,Lifting Operation,Suspended Load,Exclusion zone not maintained under suspended load,Lifting Operations
+308,Worker entered the drop zone of an active crane lift without authorization.,HIGH,Lifting Operation,Suspended Load,Drop zone not barricaded,Lifting Operations
+309,"A damaged sling was used to lift a heavy steel component, risking a catastrophic load drop.",HIGH,Lifting Operation,Suspended Load,Pre-lift inspection of lifting gear not conducted,Lifting Operations
+310,Workers remained inside the crane swing radius during an active lifting operation.,HIGH,Lifting Operation,Suspended Load,Swing radius exclusion zone not cleared,Lifting Operations
+311,A heavy load was lifted above workers who had not evacuated the area below.,HIGH,Lifting Operation,Suspended Load,Area below lift not cleared of personnel,Lifting Operations
+312,"An overloaded crane hook was used to lift a heavy structural component, exceeding the rated capacity.",HIGH,Lifting Operation,Suspended Load,Load weight not verified against crane capacity,Lifting Operations
+313,"Worker correctly used a mechanical lifting aid to move a heavy load, following the manual handling procedure.",LOW,Manual Handling,None identified,No barrier failure,No clear Life-Saving Rule detected
+314,Team performed a two-person lift for a heavy component following the safe manual handling guidelines.,LOW,Manual Handling,None identified,No barrier failure,No clear Life-Saving Rule detected
+315,Worker completed a pre-lift check and used correct posture when handling a heavy load.,LOW,Manual Handling,None identified,No barrier failure,No clear Life-Saving Rule detected
+316,Lifting team carried out a toolbox talk on correct manual handling technique before starting the heavy load task.,LOW,Manual Handling,None identified,No barrier failure,No clear Life-Saving Rule detected
+317,Supervisor confirmed all workers used proper lifting technique and appropriate equipment for the heavy load movement.,LOW,Manual Handling,None identified,No barrier failure,No clear Life-Saving Rule detected
+318,A team lift was conducted for a heavy load and all workers maintained correct posture throughout the task.,LOW,Manual Handling,None identified,No barrier failure,No clear Life-Saving Rule detected

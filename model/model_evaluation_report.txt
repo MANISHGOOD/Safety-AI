@@ -1,0 +1,38 @@
+======================================================================
+SIH26165 - MODEL EVALUATION REPORT
+======================================================================
+
+Dataset size overall:      3018 reports
+Train size (80%):          2414 reports
+Test size (20%):           604 reports
+
+Train class distribution:  {'LOW': 805, 'HIGH': 805, 'MEDIUM': 804}
+Test class distribution:   {'MEDIUM': 202, 'LOW': 201, 'HIGH': 201}
+
+Features:                  TF-IDF unigrams and bigrams (1,2)-gram
+Vectorizer:                TfidfVectorizer (lowercase, stop_words=english, min_df=1)
+Model:                     LogisticRegression (max_iter=2000)
+Pipeline:                  TfidfVectorizer -> LogisticRegression
+Random seed:               42
+Test split (percentage):   20%
+
+======================================================================
+EVALUATION METRICS (held-out test set)
+======================================================================
+Accuracy:                  98.01%
+Precision (macro):         98.04%
+Recall (macro):            98.01%
+F1 score (macro):          98.02%
+HIGH-risk recall:          98.51%
+
+Per-class metrics:
+  HIGH     precision=97.06%  recall=98.51%  f1=97.78%  support=201
+  MEDIUM   precision=100.00%  recall=97.03%  f1=98.49%  support=202
+  LOW      precision=97.06%  recall=98.51%  f1=97.78%  support=201
+
+Confusion matrix (rows=actual, cols=predicted):
+                 HIGH   MEDIUM      LOW
+HIGH              198        0        3
+MEDIUM              3      196        3
+LOW                 3        0      198
+

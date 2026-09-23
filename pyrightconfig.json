@@ -1,0 +1,6 @@
+{
+  "include": ["backend", "model"],
+  "extraPaths": ["model"],
+  "pythonVersion": "3.12",
+  "typeCheckingMode": "basic"
+}

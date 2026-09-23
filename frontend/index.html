@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SIH26165 AI-powered safety incident report analyzer for SIF precursor detection, hazard classification, and Life-Saving Rule mapping." />
+  <title>SIH26165 — Safety Report Analyzer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-icon">⚠</div>
+      <div class="brand-text">
+        <span class="brand-title">SafetyAI</span>
+        <span class="brand-sub">SIH26165</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <button class="nav-item active" data-section="dashboard" id="nav-dashboard">
+        <span class="nav-icon">◈</span>
+        <span>Dashboard</span>
+      </button>
+      <button class="nav-item" data-section="analyze" id="nav-analyze">
+        <span class="nav-icon">⬡</span>
+        <span>Analyze Report</span>
+      </button>
+      <button class="nav-item" data-section="history" id="nav-history">
+        <span class="nav-icon">◉</span>
+        <span>Report History</span>
+      </button>
+      <button class="nav-item" data-section="model" id="nav-model">
+        <span class="nav-icon">◎</span>
+        <span>Model Info</span>
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="api-status" id="api-status">
+        <span class="status-dot" id="status-dot"></span>
+        <span id="status-text">Connecting…</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main" id="main">
+
+    <!-- ── DASHBOARD ─────────────────────────────────────── -->
+    <section class="section" id="section-dashboard">
+
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Safety Intelligence Dashboard</h1>
+          <p class="page-sub">Real-time SIF precursor detection powered by Machine Learning</p>
+        </div>
+        <button class="btn btn-primary" onclick="switchSection('analyze')">
+          ＋ Analyze Report
+        </button>
+      </div>
+
+      <!-- Stat cards -->
+      <div class="stat-grid" id="stat-grid">
+        <div class="stat-card stat-total">
+          <div class="stat-icon">📋</div>
+          <div class="stat-value" id="stat-total">—</div>
+          <div class="stat-label">Total Analyzed</div>
+        </div>
+        <div class="stat-card stat-high">
+          <div class="stat-icon">🔴</div>
+          <div class="stat-value" id="stat-high">—</div>
+          <div class="stat-label">HIGH Risk</div>
+        </div>
+        <div class="stat-card stat-medium">
+          <div class="stat-icon">🟡</div>
+          <div class="stat-value" id="stat-medium">—</div>
+          <div class="stat-label">MEDIUM Risk</div>
+        </div>
+        <div class="stat-card stat-low">
+          <div class="stat-icon">🟢</div>
+          <div class="stat-value" id="stat-low">—</div>
+          <div class="stat-label">LOW Risk</div>
+        </div>
+      </div>
+
+      <!-- Chart + Recent -->
+      <div class="dashboard-body">
+        <div class="card chart-card">
+          <h2 class="card-title">Risk Distribution</h2>
+          <div class="donut-wrapper">
+            <canvas id="risk-chart" width="220" height="220"></canvas>
+            <div class="donut-center" id="donut-center">
+              <span class="donut-num" id="donut-total">0</span>
+              <span class="donut-label">reports</span>
+            </div>
+          </div>
+          <div class="chart-legend" id="chart-legend"></div>
+        </div>
+
+        <div class="card recent-card">
+          <h2 class="card-title">Recent Analyses</h2>
+          <div class="recent-list" id="recent-list">
+            <div class="empty-state">No analyses yet. Submit a report to begin.</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ── ANALYZE REPORT ─────────────────────────────────── -->
+    <section class="section hidden" id="section-analyze">
+
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Analyze Safety Report</h1>
+          <p class="page-sub">Paste or type a safety observation, near-miss, or incident report</p>
+        </div>
+      </div>
+
+      <div class="analyze-layout">
+
+        <!-- Input card -->
+        <div class="card input-card">
+          <h2 class="card-title">Report Input</h2>
+
+          <label class="field-label" for="report-input">Safety Report Text</label>
+          <textarea
+            id="report-input"
+            class="report-textarea"
+            placeholder="Describe the safety observation or incident…&#10;&#10;Examples:&#10;• Technician entered a vessel without checking for toxic gases.&#10;• Worker climbed onto an elevated platform without fall protection.&#10;• An electrical panel was opened without isolating the power."
+            rows="8"
+          ></textarea>
+
+          <div class="input-footer">
+            <div class="quick-examples">
+              <span class="quick-label">Quick examples:</span>
+              <button class="quick-btn" data-text="Technician entered a vessel without checking for toxic gases.">Confined Space</button>
+              <button class="quick-btn" data-text="Worker climbed onto an elevated platform without fall protection.">Fall from Height</button>
+              <button class="quick-btn" data-text="Worker was observed carrying a heavy load using an improper lifting technique.">Lifting</button>
+              <button class="quick-btn" data-text="Worker was wearing the required PPE while performing routine maintenance.">Low Risk</button>
+            </div>
+            <button class="btn btn-primary btn-lg" id="analyze-btn" onclick="submitAnalysis()">
+              <span id="analyze-btn-text">⬡ Analyze Report</span>
+              <span id="analyze-spinner" class="spinner hidden"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Result panel -->
+        <div id="result-panel" class="result-panel hidden">
+
+          <!-- Risk badge -->
+          <div class="risk-hero" id="risk-hero">
+            <div class="risk-badge" id="risk-badge">—</div>
+            <div class="risk-label">SIF Potential</div>
+            <div class="confidence-bar-wrap">
+              <div class="confidence-bar-bg">
+                <div class="confidence-bar-fill" id="conf-bar"></div>
+              </div>
+              <span class="confidence-pct" id="conf-pct">0%</span>
+            </div>
+            <div class="confidence-label">Model Confidence</div>
+          </div>
+
+          <!-- Safety review override banner -->
+          <div class="override-banner hidden" id="override-banner">
+            <div class="override-title">⚠ SAFETY REVIEW REQUIRED</div>
+            <div class="override-text" id="override-text"></div>
+          </div>
+
+          <!-- Detail grid -->
+          <div class="detail-grid">
+            <div class="detail-item">
+              <div class="detail-icon">⚡</div>
+              <div class="detail-body">
+                <div class="detail-label">Life-Saving Rule</div>
+                <div class="detail-value" id="res-rule">—</div>
+              </div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-icon">☣</div>
+              <div class="detail-body">
+                <div class="detail-label">Hazard</div>
+                <div class="detail-value" id="res-hazard">—</div>
+              </div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-icon">⚙</div>
+              <div class="detail-body">
+                <div class="detail-label">Activity</div>
+                <div class="detail-value" id="res-activity">—</div>
+              </div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-icon">🛡</div>
+              <div class="detail-body">
+                <div class="detail-label">Barrier Failure</div>
+                <div class="detail-value" id="res-barrier">—</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Probability bars -->
+          <div class="card prob-card">
+            <h3 class="card-title small">Class Probabilities</h3>
+            <div class="prob-bars" id="prob-bars"></div>
+          </div>
+
+          <!-- Explanation -->
+          <div class="card explain-card">
+            <h3 class="card-title small">AI Explanation</h3>
+            <p class="explain-text" id="res-explanation">—</p>
+          </div>
+
+          <!-- Recommended action -->
+          <div class="card action-card">
+            <h3 class="card-title small">⚠ Recommended Action</h3>
+            <p class="action-text" id="res-action">—</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ── REPORT HISTORY ─────────────────────────────────── -->
+    <section class="section hidden" id="section-history">
+
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Report History</h1>
+          <p class="page-sub">All analyzed safety reports stored in local database</p>
+        </div>
+        <button class="btn btn-secondary" onclick="loadHistory()">↻ Refresh</button>
+      </div>
+
+      <div class="card">
+        <div class="table-filters">
+          <input class="filter-input" id="history-search" type="text" placeholder="Search reports…" oninput="filterHistory()" />
+          <select class="filter-select" id="history-risk-filter" onchange="filterHistory()">
+            <option value="">All Risk Levels</option>
+            <option value="HIGH">HIGH</option>
+            <option value="MEDIUM">MEDIUM</option>
+            <option value="LOW">LOW</option>
+          </select>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table" id="history-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Report (truncated)</th>
+                <th>Risk</th>
+                <th>Confidence</th>
+                <th>Hazard</th>
+                <th>Life-Saving Rule</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody id="history-tbody">
+              <tr><td colspan="7" class="empty-row">Loading…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ── MODEL INFO ─────────────────────────────────────── -->
+    <section class="section hidden" id="section-model">
+
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Model Information</h1>
+          <p class="page-sub">Architecture, performance, and dataset details</p>
+        </div>
+      </div>
+
+      <div class="model-grid model-grid-wide">
+
+        <!-- ── Performance Metrics ── -->
+        <div class="card perf-card">
+          <h2 class="card-title">Performance Metrics
+            <span class="perf-note">80/20 train-test split · prototype dataset</span>
+          </h2>
+
+          <div class="metrics-grid">
+            <div class="metric-tile">
+              <div class="metric-ring">
+                <svg viewBox="0 0 80 80" width="80" height="80">
+                  <circle cx="40" cy="40" r="32" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="7"/>
+                  <circle cx="40" cy="40" r="32" fill="none" stroke="#00d4ff" stroke-width="7"
+                    stroke-dasharray="201" stroke-dashoffset="201"
+                    stroke-linecap="round" transform="rotate(-90 40 40)"
+                    id="ring-accuracy" style="transition:stroke-dashoffset 1.2s ease"/>
+                </svg>
+                <div class="metric-ring-center">
+                  <span class="metric-ring-val" id="val-accuracy">—</span>
+                </div>
+              </div>
+              <div class="metric-label">Accuracy</div>
+            </div>
+
+            <div class="metric-tile">
+              <div class="metric-ring">
+                <svg viewBox="0 0 80 80" width="80" height="80">
+                  <circle cx="40" cy="40" r="32" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="7"/>
+                  <circle cx="40" cy="40" r="32" fill="none" stroke="#a78bfa" stroke-width="7"
+                    stroke-dasharray="201" stroke-dashoffset="201"
+                    stroke-linecap="round" transform="rotate(-90 40 40)"
+                    id="ring-precision" style="transition:stroke-dashoffset 1.3s ease"/>
+                </svg>
+                <div class="metric-ring-center">
+                  <span class="metric-ring-val" id="val-precision" style="color:#a78bfa">—</span>
+                </div>
+              </div>
+              <div class="metric-label">Precision</div>
+            </div>
+
+            <div class="metric-tile">
+              <div class="metric-ring">
+                <svg viewBox="0 0 80 80" width="80" height="80">
+                  <circle cx="40" cy="40" r="32" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="7"/>
+                  <circle cx="40" cy="40" r="32" fill="none" stroke="#34d399" stroke-width="7"
+                    stroke-dasharray="201" stroke-dashoffset="201"
+                    stroke-linecap="round" transform="rotate(-90 40 40)"
+                    id="ring-recall" style="transition:stroke-dashoffset 1.4s ease"/>
+                </svg>
+                <div class="metric-ring-center">
+                  <span class="metric-ring-val" id="val-recall" style="color:#34d399">—</span>
+                </div>
+              </div>
+              <div class="metric-label">Recall</div>
+            </div>
+
+            <div class="metric-tile">
+              <div class="metric-ring">
+                <svg viewBox="0 0 80 80" width="80" height="80">
+                  <circle cx="40" cy="40" r="32" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="7"/>
+                  <circle cx="40" cy="40" r="32" fill="none" stroke="#fb923c" stroke-width="7"
+                    stroke-dasharray="201" stroke-dashoffset="201"
+                    stroke-linecap="round" transform="rotate(-90 40 40)"
+                    id="ring-f1" style="transition:stroke-dashoffset 1.5s ease"/>
+                </svg>
+                <div class="metric-ring-center">
+                  <span class="metric-ring-val" id="val-f1" style="color:#fb923c">—</span>
+                </div>
+              </div>
+              <div class="metric-label">F1-Score</div>
+            </div>
+          </div>
+
+          <div class="perf-detail" id="perf-detail">Loading…</div>
+        </div>
+
+        <!-- ── Confusion Matrix ── -->
+        <div class="card cm-card">
+          <h2 class="card-title">Confusion Matrix
+            <span class="perf-note">Predicted vs. Actual</span>
+          </h2>
+          <div class="cm-wrap">
+            <div class="cm-axis-label cm-y-label">Actual</div>
+            <div class="cm-inner" id="cm-grid">Loading…</div>
+            <div class="cm-axis-label cm-x-label">Predicted</div>
+          </div>
+          <p class="cm-note">Diagonal = correct predictions &nbsp;|&nbsp; Off-diagonal = misclassifications</p>
+        </div>
+
+        <!-- ── Architecture ── -->
+        <div class="card">
+          <h2 class="card-title">Architecture</h2>
+          <div class="arch-pipeline" id="arch-pipeline">
+            <div class="pipe-step">
+              <div class="pipe-icon">📄</div>
+              <div class="pipe-label">Raw Report Text</div>
+            </div>
+            <div class="pipe-arrow">→</div>
+            <div class="pipe-step">
+              <div class="pipe-icon">🔤</div>
+              <div class="pipe-label">TF-IDF Vectorizer<br/><small>1-gram + 2-gram</small></div>
+            </div>
+            <div class="pipe-arrow">→</div>
+            <div class="pipe-step">
+              <div class="pipe-icon">🧠</div>
+              <div class="pipe-label"><span id="pipe-model-name">TF-IDF + LogisticRegression</span></div>
+            </div>
+            <div class="pipe-arrow">→</div>
+            <div class="pipe-step active-step">
+              <div class="pipe-icon">⚠</div>
+              <div class="pipe-label">SIF Prediction<br/><small>HIGH / MEDIUM / LOW</small></div>
+            </div>
+          </div>
+          <div class="rule-system">
+            <h3 class="card-title small">Rule-Based Enrichment</h3>
+            <div class="rule-chips" id="rule-chips">
+              <span class="chip">Confined Space</span>
+              <span class="chip">Energy Isolation</span>
+              <span class="chip">Line of Fire</span>
+              <span class="chip">Hot Work</span>
+              <span class="chip">Working at Height</span>
+              <span class="chip">Ground Disturbance</span>
+              <span class="chip">Lifting Operations</span>
+              <span class="chip">Driving &amp; Vehicle Safety</span>
+              <span class="chip">Electrical Safety</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Dataset ── -->
+        <div class="card">
+          <h2 class="card-title">Dataset</h2>
+          <div class="dataset-stats" id="dataset-stats">Loading…</div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>

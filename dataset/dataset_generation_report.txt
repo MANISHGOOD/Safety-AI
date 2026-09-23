@@ -1,0 +1,92 @@
+SIH26165 - Dataset Generation Report
+==================================================
+
+Original rows: 318
+Synthetic rows: 2700
+Final rows: 3018
+
+Risk distribution (synthetic):
+  HIGH: 900
+  MEDIUM: 900
+  LOW: 900
+Risk distribution (final 3018):
+  HIGH: 1006
+
+  MEDIUM: 1006
+
+  LOW: 1006
+
+Activity distribution (synthetic):
+  Housekeeping: 170
+  Lifting Operation: 170
+  Work at Height: 160
+  Confined Space Entry: 150
+  Hot Work: 140
+  Vehicle Movement: 140
+  Manual Handling: 130
+  Excavation: 120
+  Electrical Maintenance: 120
+  Maintenance: 100
+  Equipment Maintenance: 100
+  Mechanical Maintenance: 90
+  Chemical Handling: 90
+  Material Handling: 80
+  Machine Operation: 80
+  Gas Leak Response: 70
+  Storage: 70
+  Worksite Control: 70
+  Fire Safety: 60
+  Permit to Work: 60
+  Safety Verification: 55
+  Hand Tools: 55
+  Chemical Maintenance: 55
+  Equipment Operation: 55
+  Process Operation: 55
+  Emergency Response: 50
+  Ventilation: 50
+  PPE: 50
+  Inspection: 50
+  Equipment Inspection: 55
+
+Hazard distribution (synthetic):
+  Falls from height: 210
+  Hazardous atmosphere: 210
+  Dropped load: 190
+  Fire or explosion: 190
+  Slip hazard: 170
+  Electric shock: 160
+  Unexpected startup: 150
+  Entanglement: 140
+  Vehicle collision: 140
+  Musculoskeletal: 130
+  Utility strike: 130
+  Chemical exposure: 140
+  Falling object: 110
+  Equipment failure: 130
+  Pressure release: 90
+  Delayed rescue: 90
+  PPE deficiency: 100
+  Noise exposure: 70
+  Housekeeping: 100
+  None identified: 50
+
+Life-saving-rule distribution (synthetic):
+  '': 740
+  'Energy Isolation': 440
+  'Line of Fire': 300
+  'Confined Space': 235
+  'Working at Height': 210
+  'Toxic Gas': 195
+  'Hot Work': 180
+  'Lifting Operations': 170
+  'Ground Disturbance': 130
+  'No clear Life-Saving Rule detected': 100
+
+Life-Saving-Rule targets are approximate per spec; the two '200' targets (Ground Disturbance, Lifting Operations) cannot be reached without forcing a rule onto scenarios where it does not logically apply, so logical counts were used instead.
+
+Duplicates found: 0 exact; 0 near-duplicate token-sets
+Invalid records found: 0
+Records corrected/rejected: 0
+Original rows changed: NO
+Original file checksum (sha256): 320fe5fea58a338f429580bb5c7c8e76dd9aec91ef87c49c4b6886aeecdf8013
+Expanded file checksum (sha256): ca6f82a5534f76247c4a819fc46dad6b5948a43362367422e2822f0f88bf97f3
