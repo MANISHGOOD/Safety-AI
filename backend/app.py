@@ -954,8 +954,9 @@ def stats():
 
 
 if __name__ == "__main__":
-    print("[SIH26165] Starting Flask backend on http://127.0.0.1:8080")
+    port = int(os.environ.get("PORT", 8080))
+    print(f"[SIH26165] Starting Flask backend on http://0.0.0.0:{port}")
     print(f"[SIH26165] Dataset size: {len(data)} rows")
     print(f"[SIH26165] Model: {_EVAL['model_type']}")
     print(f"[SIH26165] Accuracy: {_EVAL['accuracy']*100:.2f}% | F1: {_EVAL['f1_macro']*100:.2f}%")
-    app.run(debug=True, host="127.0.0.1", port=8080, use_reloader=False)
+    app.run(debug=False, host="0.0.0.0", port=port, use_reloader=False)

@@ -2,7 +2,10 @@
    SIH26165 — Safety Report Analyzer  |  index.js
    ============================================================ */
 
-const API = 'http://127.0.0.1:8080';
+// Empty string = relative URL. Works on Render (same-origin: Flask serves
+// both the frontend and /api/* from the same process) and locally when
+// running gunicorn or python backend/app.py directly.
+const API = '';
 
 // ─── State ───────────────────────────────────────────────────
 let _allHistory = [];
